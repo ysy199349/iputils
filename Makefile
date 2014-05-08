@@ -66,11 +66,16 @@ USE_RESOLV=yes
 ENABLE_PING6_RTHDR=no
 
 # rdisc server (-r option) support [no|yes]
+# RDISC服务器（-r选项）的支持|是[不]
 ENABLE_RDISC_SERVER=no
 
 # -------------------------------------
 # What a pity, all new gccs are buggy and -Werror does not work. Sigh.
-# CCOPT=-fno-strict-aliasing -Wstrict-prototypes -Wall -Werror -g如果函数的声明或定义没有指出参数类型，编译器就发出警告
+# “可惜，所有新的GCC都是古怪的和werror不工作。叹息。
+#
+# CCOPT=-fno-strict-aliasing -Wstrict-prototypes -Wall -Werror -g
+# ccopt = - FNO严格别名- wstrict原型墙体的werror - G
+# 如果函数的声明或定义没有指出参数类型，编译器就发出警告
 CCOPT=-fno-strict-aliasing -Wstrict-prototypes -Wall -g
 CCOPTOPT=-O3
 GLIBCFIX=-D_GNU_SOURCE
@@ -232,7 +237,7 @@ ninfod:
 
 # -------------------------------------
 # modules / check-kernel are only for ancient kernels; obsolete
-# 模块/检查内核是古代仁；过时
+# 模块/检查内核是否过时的，淘汰的。
 check-kernel:
 ifeq ($(KERNEL_INCLUDE),)
 	@echo "Please, set correct KERNEL_INCLUDE"; false
