@@ -1,10 +1,12 @@
 #
+#配置
 # Configuration
 #
 
 # CC
 # 指定gcc程序
 CC=gcc
+#母核路径包含文件的目录
 # Path to parent kernel include files directory
 LIBC_INCLUDE=/usr/include
 # Libraries
@@ -24,19 +26,25 @@ LDFLAG_RESOLV=-lresolv
 LDFLAG_SYSFS=-lsysfs
 
 #
+#选项
 # Options
 #
 #变量定义，设置开关
 # Capability support (with libcap) [yes|static|no]
+#能力支持（用libcap）[是|静态|没有]
 USE_CAP=yes
 # sysfs support (with libsysfs - deprecated) [no|yes|static]
+# sysfs的支持（与libsysfs -反对）[没有|是|静态]
 USE_SYSFS=no
 # IDN support (experimental) [no|yes|static]
+# #支持IDN（实验）[没有|是|静态]
 USE_IDN=no
 
 # Do not use getifaddrs [no|yes|static]
+# #不使用getifaddrs [没有|是|静态]
 WITHOUT_IFADDRS=no
 # arping default device (e.g. eth0) []
+# arping默认设备（例如eth0）[ ]
 ARPING_DEFAULT_DEVICE=
 
 # GNU TLS library for ping6 [yes|no|static]
