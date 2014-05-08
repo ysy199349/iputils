@@ -71,8 +71,7 @@ ENABLE_RDISC_SERVER=no
 
 # -------------------------------------
 # What a pity, all new gccs are buggy and -Werror does not work. Sigh.
-# “可惜，所有新的GCC都是古怪的和werror不工作。叹息。
-#
+# 遗憾的是，所有新的gcc都是奇怪的，werror不起作用。叹息
 # CCOPT=-fno-strict-aliasing -Wstrict-prototypes -Wall -Werror -g
 # ccopt = - FNO严格别名- wstrict原型墙体的werror - G
 # 如果函数的声明或定义没有指出参数类型，编译器就发出警告
