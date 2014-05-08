@@ -10,7 +10,7 @@ CC=gcc
 # 母核路径包含文件的目录
 LIBC_INCLUDE=/usr/include
 # Libraries
-# 个人收藏
+# 库
 ADDLIB=
 # Linker flags
 # 链接器标志
@@ -50,12 +50,19 @@ WITHOUT_IFADDRS=no
 ARPING_DEFAULT_DEVICE=
 
 # GNU TLS library for ping6 [yes|no|static]
+# GNU TLS库ping6 [是|没有|静态]
 USE_GNUTLS=yes
 # Crypto library for ping6 [shared|static]
+# 密码算法库为ping6 [分享] |静态]
+#
 USE_CRYPTO=shared
 # Resolv library for ping6 [yes|static]
+#决定为ping6 [是] |静态库
+# 
 USE_RESOLV=yes
 # ping6 source routing (deprecated by RFC5095) [no|yes|RFC3542]
+# ping6源路由（不推荐使用的rfc5095）[没有|是| rfc354 ]
+
 ENABLE_PING6_RTHDR=no
 
 # rdisc server (-r option) support [no|yes]
@@ -225,6 +232,7 @@ ninfod:
 
 # -------------------------------------
 # modules / check-kernel are only for ancient kernels; obsolete
+# 模块/检查内核是古代仁；过时
 check-kernel:
 ifeq ($(KERNEL_INCLUDE),)
 	@echo "Please, set correct KERNEL_INCLUDE"; false
