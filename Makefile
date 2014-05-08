@@ -1,18 +1,19 @@
 #
-# 配置
 # Configuration
+# 配置
 #
 
 # CC
 # 指定gcc程序
 CC=gcc
-# 母核路径包含文件的目录
 # Path to parent kernel include files directory
+# 母核路径包含文件的目录
 LIBC_INCLUDE=/usr/include
 # Libraries
 # 个人收藏
 ADDLIB=
 # Linker flags
+# 链接器标志
 ##Wl选项告诉编译器将后面的参数传递给链接器
 #-Wl,-Bstatic告诉链接器使用-Bstatic选项，该选项是告诉链接器，对接下来的-l选项使用静态链接
 #-Wl,-Bdynamic就是告诉链接器对接下来的-l选项使用动态链接
@@ -27,12 +28,12 @@ LDFLAG_RESOLV=-lresolv
 LDFLAG_SYSFS=-lsysfs
 
 #
-#选项
 # Options
+# 选项
 #
 #变量定义，设置开关
 # Capability support (with libcap) [yes|static|no]
-#能力支持（用libcap）[是|静态|没有]
+# 能力支持（用libcap）[是|静态|没有]
 USE_CAP=yes
 # sysfs support (with libsysfs - deprecated) [no|yes|static]
 # sysfs的支持（与libsysfs -反对）[没有|是|静态]
