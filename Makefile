@@ -1,15 +1,16 @@
 #
-#配置
+# 配置
 # Configuration
 #
 
 # CC
 # 指定gcc程序
 CC=gcc
-#母核路径包含文件的目录
+# 母核路径包含文件的目录
 # Path to parent kernel include files directory
 LIBC_INCLUDE=/usr/include
 # Libraries
+# 个人收藏
 ADDLIB=
 # Linker flags
 ##Wl选项告诉编译器将后面的参数传递给链接器
