@@ -172,6 +172,7 @@ $(TARGETS): %: %.o
 
 # -------------------------------------
 # arping
+# 向相邻主机发送ARP请求
 DEF_arping = $(DEF_SYSFS) $(DEF_CAP) $(DEF_IDN) $(DEF_WITHOUT_IFADDRS)
 LIB_arping = $(LIB_SYSFS) $(LIB_CAP) $(LIB_IDN)
 
@@ -180,6 +181,7 @@ DEF_arping += -DDEFAULT_DEVICE=\"$(ARPING_DEFAULT_DEVICE)\"
 endif
 
 # clockdiff
+# clockdiff用来测算目的主机跟本地主机的时间差
 DEF_clockdiff = $(DEF_CAP)
 LIB_clockdiff = $(LIB_CAP)
 
@@ -196,14 +198,17 @@ ping.o ping_common.o: ping_common.h
 ping6.o: ping_common.h in6_flowlabel.h
 
 # rarpd
+# 逆地址解析
 DEF_rarpd =
 LIB_rarpd =
 
 # rdisc
+# 路由器发现守护程序
 DEF_rdisc = $(DEF_ENABLE_RDISC_SERVER)
 LIB_rdisc =
 
 # tracepath
+# 测试IP数据报文从源主机传到目的主机的路由
 DEF_tracepath = $(DEF_IDN)
 LIB_tracepath = $(LIB_IDN)
 
